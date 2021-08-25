@@ -130,7 +130,7 @@ def getLinkAgg(data):
 
 
 				try:
-					last_lnk = str(datetime.utcfromtimestamp(int(portInfo[port_num]['portData']['esmLinkStateChangeTime'])/1000).strftime("%m/%d/%Y %H:%M:%S")) + " GMT"
+					last_lnk = str(datetime.utcfromtimestamp(int(portInfo[port_num]['portData']['lastTimeLinkChanged'])/1000).strftime("%m/%d/%Y %H:%M:%S")) + " GMT"
 				except:
 					last_lnk = "None"
 
